@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!--===== CSS -->
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/base.css" />
+    <link rel="stylesheet" href="./assets/responsive.css" />
+
+
+    <!--===== ICON  -->
+    <!--===== link box icons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+    <!--===== link awesome icon -->
+
+    <!-- link awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="modal__navbar js-modal__navbar">
+                <div class="modal__navbar-overlay js-modal__navbar-overlay"></div>
+                <div class="modal__navbar-body">
+                    <div class="modal__navbar-close" onclick="closeNavBar()">
+                        <i class="close-icon fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div class="modal__navbar-logo">
+                        <img src="./assets/image/Logo.png" alt="" class="modal__navbar-logo-img">
+                        <a class="modal__navbar-link" href="#">Luxstay</a>
+                    </div>
+                    <ul class="modal__navbar-list">
+                        <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Guide</a></li>
+                        <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Host</a></li>
+                        <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Đăng ký</a></li>
+                        <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Đăng nhập</a>
+                        </li>
+                    </ul>
+                    <div class="modal__navbar-languages">
+                        <div class="modal__navbar-languages-logo">
+                            <img src="./assets/image/vn-logo.svg" alt="" class="modal__navbar-languages-img">
+                            <span class="modal__navbar-languages-text">VND</span>
+                        </div>
+                        <div class="modal__navbar-languages-icon" onclick="openLanguagesModal()">
+                            <i class='down-icon bx bxs-down-arrow'></i>
+                        </div>
+                        <div class="modal__navbar-languages-more js-modal__navbar-languages-more">
+                            <ul class="modal__navbar-languages-more-list">
+                                <li class="modal__navbar-languages-more-item">
+                                    <div class="modal__navbar-languages-item-img">
+                                        <img src="./assets/image/vn-logo.svg" alt=""
+                                            class="modal__navbar-languages-more-img">
+                                    </div>
+                                    <p class="modal__navbar-languages-item-text">Tiếng Việt</p>
+                                    <i class="check-icon bx bx-check" style="font-size: 2.2rem;"></i>
+
+                                </li>
+                                <li class="modal__navbar-languages-more-item">
+                                    <div class="modal__navbar-languages-item-img">
+                                        <img src="./assets/image/usa-logo.svg" alt=""
+                                            class="modal__navbar-languages-more-img">
+                                    </div>
+                                    <p class="modal__navbar-languages-item-text">English</p>
+
+                                </li>
+                                <li class="modal__navbar-languages-more-item">
+                                    <div class="modal__navbar-languages-item-img">
+                                        <img src="./assets/image/korean-logo.svg" alt=""
+                                            class="modal__navbar-languages-more-img">
+                                    </div>
+                                    <p class="modal__navbar-languages-item-text">Korean</p>
+                                </li>
+                                <li class="modal__navbar-languages-more-item">
+                                    <p class="modal__navbar-languages-item-content"><span>VND</span>Việt Nam Đồng
+                                    </p>
+                                </li>
+                                <li class="modal__navbar-languages-more-item padding-bottom">
+                                    <p class="modal__navbar-languages-item-content"><span>USD</span>United States Dollar
+                                    </p>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid wide">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href=""><img src="./assets/image/Logo.png" alt="" class="logo__img" /></a>
+                        <a href="#" class="logo__content">Luxstay</a>
+                    </div>
+
+                    <div class="navbar__menu">
+                        <ul class="menu-list">
+                            <li class="menu__item">
+                                <a class="menu__item-link" href="#">Guide</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__item-link" href="#">Host</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__item-link" href="#">Đăng ký</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__item-link" href="#">Đăng nhập</a>
+                            </li>
+                            <li class="menu__item">
+                                <div class="languages" onclick=" openLanguages();">
+                                    <img src="./assets/image/vn-logo.svg" alt="" width="20px" />
+                                    <p class="menu__item-link" style="margin: 0 4px;">USD</p>
+                                    <i class="down-icon bx bxs-down-arrow"></i>
+                                    <div class=" js-languages__more">
+                                        <div class="languages__more">
+                                            <div class="languages__more-list border-right">
+                                                <div class="languages__more-item">
+                                                    <div class="languages__more-item-img">
+                                                        <img src="./assets/image/vn-logo.svg" alt=""
+                                                            class="languages__more-img" />
+                                                    </div>
+                                                    <a href="#" class="languages__more-item-text">Tiếng việt</a>
+                                                    <i class="check-icon bx bx-check"></i>
+                                                </div>
+                                                <div class="languages__more-item">
+                                                    <div class="languages__more-item-img">
+                                                        <img src="./assets/image/usa-logo.svg" alt=""
+                                                            class="languages__more-img" />
+                                                    </div>
+                                                    <a href="#" class="languages__more-item-text">English</a>
+                                                </div>
+                                                <div class="languages__more-item padding-bottom">
+                                                    <div class="languages__more-item-img">
+                                                        <img src="./assets/image/korean-logo.svg" alt=""
+                                                            class="languages__more-img" />
+                                                    </div>
+                                                    <a href="#" class="languages__more-item-text">Korean</a>
+                                                </div>
+                                            </div>
+                                            <div class="languages__more-list margin-left">
+                                                <div class="languages__more-item">
+                                                    <a href="#" class="languages__more-item-heading">
+                                                        <strong>VND</strong>
+                                                    </a>
+                                                    <a href="#" class="languages__more-item-text">Việt Nam Đồng</a>
+                                                    <i class="check-icon bx bx-check"></i>
+                                                </div>
+                                                <div class="languages__more-item">
+                                                    <a href="#" class="languages__more-item-heading">
+                                                        <strong> USD</strong>
+                                                    </a>
+                                                    <a href="#" class="languages__more-item-text">United States
+                                                        Dollar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__icon-bar" onclick="openNavBar()">
+                        <i class="bar-icon fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="content__page">
+            <div class="grid wide">
+                <div class="content__page-text">
+                    <h1 class="content__page-heading">Đăng ký thành viên Luxstay - Tích điểm thưởng và nhận ưu đãi</h1>
+                    <h3 class="content__page-sub">Nhanh chóng, tiện lợi và an toàn. Đăng ký liền tay, rinh ngay quyền
+                        lợi.
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- register body start -->
+        <div class="grid wide ">
+            <div class="row login__content">
+                <div class="col l-8 m-12 c-12">
+                    <div class="row login__content-list">
+                        <div class="col l-5 login__content-item">
+                            <div class="login__content-item-img">
+                                <img src="./assets/image/register-1.png" alt="" class="login__content-img">
+                            </div>
+                            <div class="login__content-item-text">
+                                <h1 class="login__content-item-heading">Tích điểm nhanh chóng</h1>
+                                <p class="login__content-item-sub">Tích điểm đối với mỗi lượt đặt chỗ thành công. Quy
+                                    đổi thành Lux Credit để du lịch nhiều hơn nữa.</p>
+                            </div>
+                        </div>
+                        <div class="col l-5">
+                            <div class="login__content-item-img">
+                                <img src="./assets/image/register-star.png" alt="" class="login__content-img">
+                            </div>
+                            <div class="login__content-item-text">
+                                <h1 class="login__content-item-heading">Tiện ích thông minh</h1>
+                                <p class="login__content-item-sub">Check-in và kiểm tra hóa đơn thanh toán kể cả khi
+                                    không có kết nối mạng. Hoàn tiền nhanh gọn. Đổi lịch dễ dàng.</p>
+                            </div>
+                        </div>
+                        <div class="col l-5">
+                            <div class="login__content-item-img">
+                                <img src="./assets/image/register-wallet.png" alt="" class="login__content-img">
+                            </div>
+                            <div class="login__content-item-text">
+                                <h1 class="login__content-item-heading">Thanh toán đơn giản</h1>
+                                <p class="login__content-item-sub">Phương thức thanh toán tiện lợi, an toàn. Tích hợp
+                                    chức năng lưu thẻ để đặt phòng lần sau.</p>
+                            </div>
+                        </div>
+                        <div class="col l-5">
+                            <div class="login__content-item-img">
+                                <img src="./assets/image/register-bag.png" alt="" class="login__content-img">
+                            </div>
+                            <div class="login__content-item-text">
+                                <h1 class="login__content-item-heading">Ưu đãi mỗi ngày</h1>
+                                <p class="login__content-item-sub">Nhận thông báo ưu đãi từ Luxstay khi có kế hoạch du
+                                    lịch để lựa chọn và đặt ngay cho mình một chỗ ở phù hợp, tiện nghi với giá tốt nhất.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-3 m-12 c-12">
+                    <div class="register__container">
+                        <h1 class="register__heading">Đăng ký thành viên</h1>
+                        <form action="">
+                            <div class="form__email">
+                                <h2 class="form__heading">Địa chỉ email</h2>
+                                <div class="form__email-input">
+                                    <input type="text" name="email" id="">
+                                    <i class='mail-icon bx bx-mail-send'></i>
+                                </div>
+                            </div>
+                            <div class="form__number">
+                                <h2 class="form__heading">Số điện thoại</h2>
+                                <div class="form__number-input">
+
+                                    <input type="number" name="phone" id="">
+                                </div>
+                            </div>
+                            <div class="form__name">
+                                <h2 class="form__heading">Tên</h2>
+                                <div class="form__name-input">
+                                    <input type="text" name="name" id="">
+                                </div>
+                            </div>
+                            <div class="form__midleName">
+                                <h2 class="form__heading">Họ và tên đệm</h2>
+                                <div class="form__midleName-input">
+                                    <input type="text" name="phone" id="">
+
+                                </div>
+                            </div>
+                            <div class="form__pass">
+                                <h2 class="form__heading">Mật khẩu <span style="color: #999;"> (Tối thiểu 8 ký
+                                        tự)</span></h2>
+                                <div class="form__pass-input">
+                                    <input type="text" name="phone" id="">
+                                    <i class='lock-icon bx bx-lock-alt'></i>
+                                </div>
+                            </div>
+                            <div class="form__confirm">
+                                <h2 class="form__heading">Xác nhận mật khấu</h2>
+                                <div class="form__confirm-input">
+                                    <input type="text" name="phone" id="">
+                                    <i class='lock-icon bx bx-lock-alt'></i>
+                                </div>
+                            </div>
+                            <div class="form__submit">
+                                <button class="form__submit-btn" type="submit">Đăng ký</button>
+                            </div>
+                            <div class="form__change">
+                                <p class="form__change-text">Bạn đã có tài khoản Luxstay?</p>
+                                <a href="#" class="form__change-login">Đăng nhập</a>
+                            </div>
+                            <div class="form__footer">
+                                <p class="form__footer-text">Tôi đồng ý với <strong style="color:black;">Bảo
+                                        mật</strong> và <strong style="color:black;">Điều khoản hoạt động</strong> của
+                                    Luxstay.</p>
+                            </div>
+                            <div class=" form__login-media margin-bottom ">
+                                <a href="#" class="form__login-media-text ">Đăng nhập với Facebook</a>
+                                <i class='fb-icon bx bxl-facebook-square'></i>
+                            </div>
+                            <div class="form__login-media ">
+                                <a href="#" class="form__login-media-text ">Đăng nhập với Google</a>
+                                <i class='gg-icon bx bxl-google'></i>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- register body end -->
+
+    </div>
+
+    <script src="./assets/main.js "></script>
+</body>
+
+</html>

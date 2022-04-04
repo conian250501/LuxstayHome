@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxStay</title>
+
+    <!--===== Slick slide =====CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    
+    <!--===== CSS -->
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/base.css" />
+    <link rel="stylesheet" href="./assets/responsive.css" />
+    
+
+    <!--===== ICON  -->
+    <!--===== link box icons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+    <!--===== link awesome icon -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="main js-main">
+        <div class="grid wide">
+
+            <!-- Slider Image start -->
+            <section class="carousel">
+                <div class="carousel__img-list">
+                    <img src="./assets/image/banner-1.png" alt="" class="carousel-img">
+                    <img src="./assets/image/banner-2.png" alt="" class="carousel-img">
+                </div>
+                <!-- <div class="carousel__btn-list">
+                    <button class="carousel__btn active"></button>
+                    <button class="carousel__btn"></button>
+                </div> -->
+            </section>
+            <!-- Slider Image end -->
+
+            <!--===== header start =====-->
+            <header class="header">
+                <div class="modal__navbar js-modal__navbar">
+                    <div class="modal__navbar-overlay js-modal__navbar-overlay"></div>
+                    <div class="modal__navbar-body">
+                        <div class="modal__navbar-close" onclick="closeNavBar()">
+                            <i class="close-icon fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="modal__navbar-logo">
+                            <img src="./assets/image/Logo.png" alt="" class="modal__navbar-logo-img">
+                            <a class="modal__navbar-link" href="#">Luxstay</a>
+                        </div>
+                        <ul class="modal__navbar-list">
+                            <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Guide</a></li>
+                            <li class="modal__navbar-item"><a class="modal__navbar-item-link active" href="#">Host</a></li>
+                            <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Đăng ký</a></li>
+                            <li class="modal__navbar-item"><a class="modal__navbar-item-link" href="#">Đăng nhập</a>
+                            </li>
+                        </ul>
+                        <div class="modal__navbar-languages">
+                            <div class="modal__navbar-languages-logo">
+                                <img src="./assets/image/vn-logo.svg" alt="" class="modal__navbar-languages-img">
+                                <span class="modal__navbar-languages-text">VND</span>
+                            </div>
+                            <div class="modal__navbar-languages-icon" onclick="openLanguagesModal()">
+                                <i class='down-icon bx bxs-down-arrow'></i>
+                            </div>
+                            <div class="modal__navbar-languages-more js-modal__navbar-languages-more">
+                                <ul class="modal__navbar-languages-more-list">
+                                    <li class="modal__navbar-languages-more-item">
+                                        <div class="modal__navbar-languages-item-img">
+                                            <img src="./assets/image/vn-logo.svg" alt=""
+                                                class="modal__navbar-languages-more-img">
+                                        </div>
+                                        <p class="modal__navbar-languages-item-text">Tiếng Việt</p>
+                                        <i class="check-icon bx bx-check" style="font-size: 2.2rem;"></i>
+
+                                    </li>
+                                    <li class="modal__navbar-languages-more-item">
+                                        <div class="modal__navbar-languages-item-img">
+                                            <img src="./assets/image/usa-logo.svg" alt=""
+                                                class="modal__navbar-languages-more-img">
+                                        </div>
+                                        <p class="modal__navbar-languages-item-text">English</p>
+
+                                    </li>
+                                    <li class="modal__navbar-languages-more-item">
+                                        <div class="modal__navbar-languages-item-img">
+                                            <img src="./assets/image/korean-logo.svg" alt=""
+                                                class="modal__navbar-languages-more-img">
+                                        </div>
+                                        <p class="modal__navbar-languages-item-text">Korean</p>
+                                    </li>
+                                    <li class="modal__navbar-languages-more-item">
+                                        <p class="modal__navbar-languages-item-content"><span>VND</span>Việt Nam Đồng
+                                        </p>
+                                    </li>
+                                    <li class="modal__navbar-languages-more-item padding-bottom">
+                                        <p class="modal__navbar-languages-item-content"><span>USD</span>United States
+                                            Dollar </p>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="grid wide">
+                    <nav class="navbar">
+                        <div class="logo">
+                            <a href=""><img src="./assets/image/Logo.png" alt="" class="logo__img" /></a>
+                        </div>
+                        <div class="navbar__search">
+                            <div class="search">
+                                <i class="search-icon bx bx-search"></i>
+                                <div class="search__input">
+                                    <input type="search" name="search" class="search__form" placeholder="Tìm kiếm" />
+                                </div>
+                            </div>
+                            <div class="navbar__date">
+                                <i class="date-icon fas fa-calendar-day"></i>
+                                <a class="date-text" href="#">Ngày</a>
+                            </div>
+                            <div class="navbar__user js-navbar__user" onclick="openUser();">
+                                <i class="user-icon fas fa-user"></i>
+                                <div href="" class="user-text">Số khách</div>
+                                <div class="navbar__user-more js-navbar__user-more">
+                                    <div class="navbar__user-more-item">
+                                        <p class="user-item-text">Người lớn</p>
+                                        <div class="icon-minus js-minus">
+                                            <i class="minus-icon bx bx-minus"></i>
+                                        </div>
+                                        <p class="user-item-number js-number">0</p>
+                                        <div class="icon-plus js-plus">
+                                            <i class="plus-icon bx bx-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__user-more-item">
+                                        <p class="user-item-text">Trẻ em</p>
+                                        <div class="icon-minus js-minus">
+                                            <i class="minus-icon bx bx-minus"></i>
+                                        </div>
+                                        <p class="user-item-number js-number">0</p>
+                                        <div class="icon-plus  js-plus">
+                                            <i class="plus-icon bx bx-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__user-more-item">
+                                        <p class="user-item-text">Trẻ sơ sinh</p>
+                                        <div class="icon-minus js-minus">
+                                            <i class="minus-icon bx bx-minus"></i>
+                                        </div>
+                                        <p class="user-item-number js-number">0</p>
+                                        <div class="icon-plus js-plus">
+                                            <i class="plus-icon bx bx-plus"></i>
+                                        </div>
+                                    </div>
+                                    <div class="navbar__user-more-submit">
+                                        <button href="" class="user-item-remove">Xóa</button>
+                                        <button href="" class="user-item-smt">Áp dụng</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="navbar__search-submit" type="submit">
+                                <i class="search-icon bx bx-search"></i>
+                            </button>
+                        </div>
+                        <div class="navbar__menu">
+                            <ul class="menu-list">
+                                <li class="menu__item">
+                                    <a class="menu__item-link" href="#">Guide</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__item-link active" href="#">Host</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__item-link" href="#">Đăng ký</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__item-link" href="#">Đăng nhập</a>
+                                </li>
+                                <li class="menu__item">
+                                    <div class="languages" onclick=" openLanguages();">
+                                        <img src="./assets/image/vn-logo.svg" alt="" width="20px" />
+                                        <p class="menu__item-link" style="margin: 0 4px;">USD</p>
+                                        <i class="down-icon bx bxs-down-arrow"></i>
+                                        <div class=" js-languages__more">
+                                            <div class="languages__more">
+                                                <div class="languages__more-list border-right">
+                                                    <div class="languages__more-item">
+                                                        <div class="languages__more-item-img">
+                                                            <img src="./assets/image/vn-logo.svg" alt=""
+                                                                class="languages__more-img" />
+                                                        </div>
+                                                        <a href="#" class="languages__more-item-text">Tiếng việt</a>
+                                                        <i class="check-icon bx bx-check"></i>
+                                                    </div>
+                                                    <div class="languages__more-item">
+                                                        <div class="languages__more-item-img">
+                                                            <img src="./assets/image/usa-logo.svg" alt=""
+                                                                class="languages__more-img" />
+                                                        </div>
+                                                        <a href="#" class="languages__more-item-text">English</a>
+                                                    </div>
+                                                    <div class="languages__more-item padding-bottom">
+                                                        <div class="languages__more-item-img">
+                                                            <img src="./assets/image/korean-logo.svg" alt=""
+                                                                class="languages__more-img" />
+                                                        </div>
+                                                        <a href="#" class="languages__more-item-text">Korean</a>
+                                                    </div>
+                                                </div>
+                                                <div class="languages__more-list margin-left">
+                                                    <div class="languages__more-item">
+                                                        <a href="#" class="languages__more-item-heading">
+                                                            <strong>VND</strong>
+                                                        </a>
+                                                        <a href="#" class="languages__more-item-text">Việt Nam Đồng</a>
+                                                        <i class="check-icon bx bx-check"></i>
+                                                    </div>
+                                                    <div class="languages__more-item">
+                                                        <a href="#" class="languages__more-item-heading">
+                                                            <strong> USD</strong>
+                                                        </a>
+                                                        <a href="#" class="languages__more-item-text">United States
+                                                            Dollar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar__icon-bar" onclick="openNavBar()">
+                            <i class="bar-icon fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </nav>
+                    <div class="header__more">
+                        <ul class="header__more-list">
+                            <li class="header__more-item">
+                                <a class="header__more-link" href="#">Hủy phòng linh hoạt</a>
+                            </li>
+                            <li class="header__more-item">
+                                <a class="header__more-link" href="#">Đặt phòng nhanh</a>
+                            </li>
+                            <li class="header__more-item">
+                                <a class="header__more-link" href="#">Giá ưu đãi</a>
+                            </li>
+                            <li class="header__more-item">
+                                <a class="header__more-link" href="#">Loại phòng</a>
+                            </li>
+                            <li class="header__more-item">
+                                <a class="header__more-link" href="#">Giá chỗ ở</a>
+                            </li>
+                            <li class="header__more-item show-m show-c">
+                                <a class="header__more-link" href="#">Thêm bộ lọc</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </header>
+            <!--===== header end =====-->
+
+            <!--===== content section start -->
+            <section class="content__main">
+                <h2 class="content__main-heading">Chào mừng đến với Luxstay</h2>
+                <p class="content__main-text">
+                    Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên Luxstay <br />
+                    <a href="#">Đăng nhập</a> hoặc
+                    <a href="#">Đăng ký</a> để trải nghiệm!
+                 </p>
+            </section>
+            <!--===== content section end -->
+
+            <!--===== Option Section start -->
+            <section class="option" id="option">
+                <h1 class="heading">
+                    Địa điểm nổi bật
+                </h1>
+                <p class="description">Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
+                <div class="row slider__list">
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Đà Lạt</h1>
+                            <p class="option__contentt-sub"><strong>1337</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/dalat.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Đà Nẵng</h1>
+                            <p class="option__contentt-sub"><strong>337</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/daNang.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Hà Nội</h1>
+                            <p class="option__contentt-sub"><strong>237</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/Hanoi.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Hội An</h1>
+                            <p class="option__contentt-sub"><strong>1337</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/HoiAn.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Nha Trang</h1>
+                            <p class="option__contentt-sub"><strong>1537</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/NhaTrang.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Quảng Ninh</h1>
+                            <p class="option__contentt-sub"><strong>737</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/quangNinh.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">TP.Hồ Chí Minh</h1>
+                            <p class="option__contentt-sub"><strong>1337</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/TpHCM.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                    <div class="col l-2-4  slider__item">
+                        <div class="option__content">
+                            <h1 class="option__content-heading">Vũng Tàu</h1>
+                            <p class="option__contentt-sub"><strong>1337</strong>Chỗ ở</p>
+                        </div>
+                        <div class="option__img">
+                            <img src="./assets/image/VungTau.png" alt="" class="option__list-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--===== Option Section end -->
+
+            <!-- discout start -->
+            <section class="discount" id="discount">
+                <h1 class="heading">Ưu đãi độc quyền</h1>
+                <div class="description__container">
+                    <p class="description">Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book ngay!</p>
+                    <a href="#" class="description__link">Xem thêm</a>
+                </div>
+                <div class="row discount__body ">
+                    <div class="col l-4 m-12 c-12 discount__item">
+                        <a href="#" class="discount__link">
+                            <img src="./assets/image/discount-1.jpg" alt="" class="discount__img">
+                        </a>
+                    </div>
+                    <div class="col l-4 m-12 c-12 discount__item">
+                        <a href="#" class="discount__link">
+                            <img src="./assets/image/discount-2.jpg" alt="" class="discount__img">
+                        </a>
+                    </div>
+                    <div class="col l-4 m-12 c-12 discount__item">
+                        <a href="#" class="discount__link">
+                            <img src="./assets/image/discount-3.jpg" alt="" class="discount__img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- discout end -->
+
+            <!--===== category start =====-->
+            <section class="category" id="category">
+                <div class="heading">7600 homestay nổi bật tại Luxstay</div>
+                <div class="row category__list">
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-1.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-2.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-3.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-4.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-5.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-6.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-7.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-8.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-9.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-10.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-9.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-8.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-7.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-6.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-5.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-4.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-3.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-2.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/category-1.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                    <div class="col l-2-4 m-6 c-6 category__item">
+                        <div class="category__item-img">
+                            <img src="./assets/image/ca.jpg" alt="" class="category__img">
+                        </div>
+                        <div class="category__content">
+                            <div class="category__sub">
+                                <p class="category__sub-title">Chung cư - 2 phòng ngủ
+                                </p>
+                                <div class="category__sub-star">
+                                    <i class='star-icon bx bxs-star'></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                            <div class="category__heading">
+                                <div class="category__heading-icon">
+                                    <i class='protect-icon bx bxs-shield-alt-2'></i>
+                                </div>
+                                <h3 class="category__heading-text">IPG.C1003 - Căn hộ 2 phòng ngủ tại Imperia Garden -
+                                    Thiết kế
+                                    hiện đại và tiện dụng</h3>
+                            </div>
+                            <div class="category__price">1,170,000đ/đêm</div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="page__list">
+                    <li class="page__item active"><a class="page__link" href="#">1</a></li>
+                    <li class="page__item"><a class="page__link" href="#">2</a></li>
+                    <li class="page__item"><a class="page__link" href="#">3</a></li>
+                    <li class="page__item"><a class="page__link" href="#">4</a></li>
+                    <li class="page__item"><a class="page__link" href="#">5</a></li>
+                    <li class="page__item"><a class="page__link" href="#">...</a></li>
+                    <li class="page__item"><a class="page__link" href="#">400</a></li>
+                    <div class="page__item">
+                        <li class="page__item-move"><a class="page__link" href="#"><i
+                                    class='page__right-icon bx bx-chevron-right'></i></a></li>
+                    </div>
+                </ul>
+                <div class="page__content">21 - 40 trong số 7598 Chỗ ở</div>
+            </section>
+            <!--===== category end =====-->
+
+        </div>
+        <footer class="footer" id="footer">
+            <div class="footer__content">
+                <p class="footer__content-text">© 2021 Luxstay. Bản quyền thuộc về Công ty TNHH Luxstay Việt Nam - MSDN:
+                    0108308449. Mọi hành vi sao chép đều là phạm pháp nếu không có sự cho phép bằng văn bản của
+                    chúng tôi.</p>
+                <p class="footer__content-text">Tầng 21 tòa nhà Capital Tower số 109 phố Trần Hưng Đạo, phường Cửa Nam,
+                    quận
+                    Hoàn Kiếm, Hà Nội. Email: info@luxstay.com, Số điện thoại: 18006586.</p>
+                <div class="footer__content-text">Số Giấy chứng nhận đăng ký doanh nghiệp: 0108308449, ngày cấp:
+                    06/06/2018,
+                    nơi cấp: Sở Kế hoạch và Đầu tư TP Hà Nội</div>
+            </div>
+        </footer>
+
+
+        <!--===== Slick Slide =====-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+        </script>
+
+        <!--===== Script -->
+        <script src="./assets/main.js"></script>
+
+</body>
+
+</html>
