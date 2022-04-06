@@ -682,6 +682,10 @@
 
 /* Mobile */
 @media screen and (max-width: 767px) {
+  section {
+    margin: 4rem 1.6rem;
+  }
+
   .col {
     padding-left: 8px;
     padding-right: 8px;
@@ -794,6 +798,19 @@
     padding: 5rem;
   }
 
+  .footer__top {
+    text-align: center;
+    padding: 0 1.6rem;
+  }
+  .img__QR {
+    width: 35%;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .footer__top-social {
+    align-items: center;
+    flex-direction: column;
+  }
   /*===== Modal =====*/
   .modal__navbar-body {
     width: 100%;
